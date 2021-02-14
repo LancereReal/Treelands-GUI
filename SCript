@@ -1479,7 +1479,7 @@ Fruit18.MouseButton1Down:connect(function()
 	end
 end)
 Fruit19.MouseButton1Down:connect(function() 
-	local desiredFruit = "potato"
+	local desiredFruit = "Potato"
 	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
 		v.Tooltip.Value = desiredFruit
 		v.Name = desiredFruit
