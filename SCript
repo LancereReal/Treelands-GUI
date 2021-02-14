@@ -1,0 +1,1544 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local TreeLandsGUI = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Top = Instance.new("Frame")
+local GUIName = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local Bottom = Instance.new("Frame")
+local Credits = Instance.new("TextLabel")
+local Instructions = Instance.new("TextLabel")
+local Page1 = Instance.new("Frame")
+local Fruit1 = Instance.new("ImageButton")
+local Fruit1Label = Instance.new("TextLabel")
+local FruitPriceLabel1 = Instance.new("TextLabel")
+local Fruit2 = Instance.new("ImageButton")
+local Fruit2Label = Instance.new("TextLabel")
+local FruitPriceLabel2 = Instance.new("TextLabel")
+local Fruit4 = Instance.new("ImageButton")
+local Fruit4Label = Instance.new("TextLabel")
+local FruitPriceLabel4 = Instance.new("TextLabel")
+local Fruit3 = Instance.new("ImageButton")
+local Fruit3Label = Instance.new("TextLabel")
+local FruitPriceLabel3 = Instance.new("TextLabel")
+local Fruit6 = Instance.new("ImageButton")
+local Fruit6Label = Instance.new("TextLabel")
+local FruitPriceLabel6 = Instance.new("TextLabel")
+local Fruit5 = Instance.new("ImageButton")
+local Fruit5Label = Instance.new("TextLabel")
+local FruitPriceLabel5 = Instance.new("TextLabel")
+local PageNumber = Instance.new("TextLabel")
+local Page2 = Instance.new("Frame")
+local Fruit6_2 = Instance.new("ImageButton")
+local Fruit1Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel1_2 = Instance.new("TextLabel")
+local Fruit7 = Instance.new("ImageButton")
+local Fruit2Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel2_2 = Instance.new("TextLabel")
+local Fruit9 = Instance.new("ImageButton")
+local Fruit4Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel4_2 = Instance.new("TextLabel")
+local Fruit8 = Instance.new("ImageButton")
+local Fruit3Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel3_2 = Instance.new("TextLabel")
+local Fruit11 = Instance.new("ImageButton")
+local Fruit6Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel6_2 = Instance.new("TextLabel")
+local Fruit10 = Instance.new("ImageButton")
+local Fruit5Label_2 = Instance.new("TextLabel")
+local FruitPriceLabel5_2 = Instance.new("TextLabel")
+local PageNumber_2 = Instance.new("TextLabel")
+local Page3 = Instance.new("Frame")
+local Fruit12 = Instance.new("ImageButton")
+local Fruit1Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel1_3 = Instance.new("TextLabel")
+local Fruit13 = Instance.new("ImageButton")
+local Fruit2Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel2_3 = Instance.new("TextLabel")
+local Fruit15 = Instance.new("ImageButton")
+local Fruit4Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel4_3 = Instance.new("TextLabel")
+local Fruit14 = Instance.new("ImageButton")
+local Fruit3Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel3_3 = Instance.new("TextLabel")
+local Fruit17 = Instance.new("ImageButton")
+local Fruit6Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel6_3 = Instance.new("TextLabel")
+local Fruit15_2 = Instance.new("ImageButton")
+local Fruit5Label_3 = Instance.new("TextLabel")
+local FruitPriceLabel5_3 = Instance.new("TextLabel")
+local PageNumber_3 = Instance.new("TextLabel")
+local Page4 = Instance.new("Frame")
+local Fruit18 = Instance.new("ImageButton")
+local Fruit1Label_4 = Instance.new("TextLabel")
+local FruitPriceLabel1_4 = Instance.new("TextLabel")
+local Fruit19 = Instance.new("ImageButton")
+local Fruit2Label_4 = Instance.new("TextLabel")
+local FruitPriceLabel2_4 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local Fruit20 = Instance.new("ImageButton")
+local Fruit3Label_4 = Instance.new("TextLabel")
+local FruitPriceLabel3_4 = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local PageNumber_4 = Instance.new("TextLabel")
+local Fruit21 = Instance.new("ImageButton")
+local Fruit1Label_5 = Instance.new("TextLabel")
+local FruitPriceLabel1_5 = Instance.new("TextLabel")
+local Page5 = Instance.new("Frame")
+local Crystal1 = Instance.new("ImageButton")
+local Fruit1Label_6 = Instance.new("TextLabel")
+local FruitPriceLabel1_6 = Instance.new("TextLabel")
+local Crystal2 = Instance.new("ImageButton")
+local Fruit2Label_5 = Instance.new("TextLabel")
+local FruitPriceLabel2_5 = Instance.new("TextLabel")
+local Crystal4 = Instance.new("ImageButton")
+local Fruit4Label_4 = Instance.new("TextLabel")
+local FruitPriceLabel4_4 = Instance.new("TextLabel")
+local Crystal3 = Instance.new("ImageButton")
+local Fruit3Label_5 = Instance.new("TextLabel")
+local FruitPriceLabel3_5 = Instance.new("TextLabel")
+local Crystal5 = Instance.new("ImageButton")
+local Fruit5Label_4 = Instance.new("TextLabel")
+local FruitPriceLabel5_4 = Instance.new("TextLabel")
+local PageNumber_5 = Instance.new("TextLabel")
+local Page1Toggle = Instance.new("TextButton")
+local Page2Toggle = Instance.new("TextButton")
+local Page3Toggle = Instance.new("TextButton")
+local Page4Toggle = Instance.new("TextButton")
+local Page5Toggle = Instance.new("TextButton")
+
+--Properties:
+
+TreeLandsGUI.Name = "TreeLandsGUI"
+TreeLandsGUI.Parent = game.CoreGui
+TreeLandsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TreeLandsGUI.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = TreeLandsGUI
+MainFrame.BackgroundColor3 = Color3.fromRGB(224, 172, 84)
+MainFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MainFrame.Position = UDim2.new(0.386233389, 0, 0.179846942, 0)
+MainFrame.Selectable = true
+MainFrame.Size = UDim2.new(0, 299, 0, 501)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+Top.Name = "Top"
+Top.Parent = MainFrame
+Top.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Top.Size = UDim2.new(0, 299, 0, 29)
+
+GUIName.Name = "GUIName"
+GUIName.Parent = Top
+GUIName.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+GUIName.Size = UDim2.new(0, 299, 0, 29)
+GUIName.Font = Enum.Font.SourceSans
+GUIName.Text = "Treelands Beta GUI"
+GUIName.TextColor3 = Color3.fromRGB(30, 30, 30)
+GUIName.TextSize = 14.000
+GUIName.TextStrokeTransparency = 0.950
+GUIName.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Top
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.Position = UDim2.new(0.923076928, 0, 0, 0)
+Exit.Size = UDim2.new(0, 23, 0, 23)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "x"
+Exit.TextColor3 = Color3.fromRGB(30, 30, 30)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+Bottom.Name = "Bottom"
+Bottom.Parent = MainFrame
+Bottom.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Bottom.Position = UDim2.new(0, 0, 0.942115784, 0)
+Bottom.Size = UDim2.new(0, 299, 0, 29)
+
+Credits.Name = "Credits"
+Credits.Parent = Bottom
+Credits.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Credits.Size = UDim2.new(0, 299, 0, 29)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Made by Lancere || Inspired By Lolipopz V#RM || Credits To Beverly"
+Credits.TextColor3 = Color3.fromRGB(30, 30, 30)
+Credits.TextSize = 12.000
+Credits.TextStrokeTransparency = 0.950
+Credits.TextWrapped = true
+
+Instructions.Name = "Instructions"
+Instructions.Parent = MainFrame
+Instructions.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Instructions.Position = UDim2.new(0.0501672253, 0, 0.0718562901, 0)
+Instructions.Size = UDim2.new(0, 269, 0, 52)
+Instructions.Font = Enum.Font.SourceSans
+Instructions.Text = "1. Combine how much apples you want.                                    2. Place the combined apples into the selling  basket. 3. Click what fruit/crystal you want and sell."
+Instructions.TextColor3 = Color3.fromRGB(30, 30, 30)
+Instructions.TextSize = 14.000
+Instructions.TextWrapped = true
+
+Page1.Name = "Page1"
+Page1.Parent = MainFrame
+Page1.BackgroundColor3 = Color3.fromRGB(224, 172, 90)
+Page1.Position = UDim2.new(0.0501672253, 0, 0.249501005, 0)
+Page1.Size = UDim2.new(0, 269, 0, 326)
+Page1.Visible = true
+
+Fruit1.Name = "Fruit1"
+Fruit1.Parent = Page1
+Fruit1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit1.Position = UDim2.new(0.0929367989, 0, 0.036809817, 0)
+Fruit1.Size = UDim2.new(0, 80, 0, 80)
+Fruit1.Image = "rbxassetid://6390815942"
+
+Fruit1Label.Name = "Fruit1Label"
+Fruit1Label.Parent = Fruit1
+Fruit1Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label.BackgroundTransparency = 0.850
+Fruit1Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label.Font = Enum.Font.SourceSans
+Fruit1Label.Text = "Apple"
+Fruit1Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label.TextScaled = true
+Fruit1Label.TextSize = 14.000
+Fruit1Label.TextWrapped = true
+
+FruitPriceLabel1.Name = "FruitPriceLabel1"
+FruitPriceLabel1.Parent = Fruit1
+FruitPriceLabel1.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1.BackgroundTransparency = 0.500
+FruitPriceLabel1.BorderSizePixel = 0
+FruitPriceLabel1.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1.Font = Enum.Font.SourceSans
+FruitPriceLabel1.Text = "$2"
+FruitPriceLabel1.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1.TextScaled = true
+FruitPriceLabel1.TextSize = 14.000
+FruitPriceLabel1.TextWrapped = true
+
+Fruit2.Name = "Fruit2"
+Fruit2.Parent = Page1
+Fruit2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit2.Position = UDim2.new(0.609665453, 0, 0.036809817, 0)
+Fruit2.Size = UDim2.new(0, 80, 0, 80)
+Fruit2.Image = "http://www.roblox.com/asset/?id=6390935852"
+
+Fruit2Label.Name = "Fruit2Label"
+Fruit2Label.Parent = Fruit2
+Fruit2Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit2Label.BackgroundTransparency = 0.850
+Fruit2Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit2Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit2Label.Font = Enum.Font.SourceSans
+Fruit2Label.Text = "Banana"
+Fruit2Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit2Label.TextScaled = true
+Fruit2Label.TextSize = 14.000
+Fruit2Label.TextWrapped = true
+
+FruitPriceLabel2.Name = "FruitPriceLabel2"
+FruitPriceLabel2.Parent = Fruit2
+FruitPriceLabel2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel2.BackgroundTransparency = 0.500
+FruitPriceLabel2.BorderSizePixel = 0
+FruitPriceLabel2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel2.Font = Enum.Font.SourceSans
+FruitPriceLabel2.Text = "$6"
+FruitPriceLabel2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel2.TextScaled = true
+FruitPriceLabel2.TextSize = 14.000
+FruitPriceLabel2.TextWrapped = true
+
+Fruit4.Name = "Fruit4"
+Fruit4.Parent = Page1
+Fruit4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit4.Position = UDim2.new(0.609665453, 0, 0.37730062, 0)
+Fruit4.Size = UDim2.new(0, 80, 0, 80)
+Fruit4.Image = "http://www.roblox.com/asset/?id=6390936192"
+
+Fruit4Label.Name = "Fruit4Label"
+Fruit4Label.Parent = Fruit4
+Fruit4Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit4Label.BackgroundTransparency = 0.850
+Fruit4Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit4Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit4Label.Font = Enum.Font.SourceSans
+Fruit4Label.Text = "BlueBerry"
+Fruit4Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit4Label.TextScaled = true
+Fruit4Label.TextSize = 14.000
+Fruit4Label.TextWrapped = true
+
+FruitPriceLabel4.Name = "FruitPriceLabel4"
+FruitPriceLabel4.Parent = Fruit4
+FruitPriceLabel4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel4.BackgroundTransparency = 0.500
+FruitPriceLabel4.BorderSizePixel = 0
+FruitPriceLabel4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel4.Font = Enum.Font.SourceSans
+FruitPriceLabel4.Text = "$3"
+FruitPriceLabel4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel4.TextScaled = true
+FruitPriceLabel4.TextSize = 14.000
+FruitPriceLabel4.TextWrapped = true
+
+Fruit3.Name = "Fruit3"
+Fruit3.Parent = Page1
+Fruit3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit3.Position = UDim2.new(0.0929367989, 0, 0.37730062, 0)
+Fruit3.Size = UDim2.new(0, 80, 0, 80)
+Fruit3.Image = "http://www.roblox.com/asset/?id=6390936009"
+
+Fruit3Label.Name = "Fruit3Label"
+Fruit3Label.Parent = Fruit3
+Fruit3Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit3Label.BackgroundTransparency = 0.850
+Fruit3Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit3Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit3Label.Font = Enum.Font.SourceSans
+Fruit3Label.Text = "BlackBerry"
+Fruit3Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit3Label.TextScaled = true
+Fruit3Label.TextSize = 14.000
+Fruit3Label.TextWrapped = true
+
+FruitPriceLabel3.Name = "FruitPriceLabel3"
+FruitPriceLabel3.Parent = Fruit3
+FruitPriceLabel3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel3.BackgroundTransparency = 0.500
+FruitPriceLabel3.BorderSizePixel = 0
+FruitPriceLabel3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel3.Font = Enum.Font.SourceSans
+FruitPriceLabel3.Text = "$9"
+FruitPriceLabel3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel3.TextScaled = true
+FruitPriceLabel3.TextSize = 14.000
+FruitPriceLabel3.TextWrapped = true
+
+Fruit6.Name = "Fruit6"
+Fruit6.Parent = Page1
+Fruit6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit6.Position = UDim2.new(0.609665453, 0, 0.696319044, 0)
+Fruit6.Size = UDim2.new(0, 80, 0, 80)
+Fruit6.Image = "http://www.roblox.com/asset/?id=6390937033"
+
+Fruit6Label.Name = "Fruit6Label"
+Fruit6Label.Parent = Fruit6
+Fruit6Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit6Label.BackgroundTransparency = 0.850
+Fruit6Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit6Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit6Label.Font = Enum.Font.SourceSans
+Fruit6Label.Text = "Green Apple"
+Fruit6Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit6Label.TextScaled = true
+Fruit6Label.TextSize = 14.000
+Fruit6Label.TextWrapped = true
+
+FruitPriceLabel6.Name = "FruitPriceLabel6"
+FruitPriceLabel6.Parent = Fruit6
+FruitPriceLabel6.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel6.BackgroundTransparency = 0.500
+FruitPriceLabel6.BorderSizePixel = 0
+FruitPriceLabel6.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel6.Font = Enum.Font.SourceSans
+FruitPriceLabel6.Text = "$8"
+FruitPriceLabel6.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel6.TextScaled = true
+FruitPriceLabel6.TextSize = 14.000
+FruitPriceLabel6.TextWrapped = true
+
+Fruit5.Name = "Fruit5"
+Fruit5.Parent = Page1
+Fruit5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit5.Position = UDim2.new(0.0929367989, 0, 0.696319044, 0)
+Fruit5.Size = UDim2.new(0, 80, 0, 80)
+Fruit5.Image = "http://www.roblox.com/asset/?id=6390936863"
+
+Fruit5Label.Name = "Fruit5Label"
+Fruit5Label.Parent = Fruit5
+Fruit5Label.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit5Label.BackgroundTransparency = 0.850
+Fruit5Label.Position = UDim2.new(0, 0, 1, 0)
+Fruit5Label.Size = UDim2.new(0, 80, 0, 14)
+Fruit5Label.Font = Enum.Font.SourceSans
+Fruit5Label.Text = "Durian"
+Fruit5Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit5Label.TextScaled = true
+Fruit5Label.TextSize = 14.000
+Fruit5Label.TextWrapped = true
+
+FruitPriceLabel5.Name = "FruitPriceLabel5"
+FruitPriceLabel5.Parent = Fruit5
+FruitPriceLabel5.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel5.BackgroundTransparency = 0.500
+FruitPriceLabel5.BorderSizePixel = 0
+FruitPriceLabel5.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel5.Font = Enum.Font.SourceSans
+FruitPriceLabel5.Text = "$80"
+FruitPriceLabel5.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel5.TextScaled = true
+FruitPriceLabel5.TextSize = 14.000
+FruitPriceLabel5.TextWrapped = true
+
+PageNumber.Name = "PageNumber"
+PageNumber.Parent = Page1
+PageNumber.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageNumber.BackgroundTransparency = 1.000
+PageNumber.Position = UDim2.new(0.405204475, 0, 0.94785279, 0)
+PageNumber.Size = UDim2.new(0, 55, 0, 12)
+PageNumber.Font = Enum.Font.SourceSans
+PageNumber.Text = "Page 1"
+PageNumber.TextColor3 = Color3.fromRGB(30, 30, 30)
+PageNumber.TextSize = 14.000
+
+Page2.Name = "Page2"
+Page2.Parent = MainFrame
+Page2.BackgroundColor3 = Color3.fromRGB(224, 172, 90)
+Page2.Position = UDim2.new(0.0501672253, 0, 0.249501005, 0)
+Page2.Size = UDim2.new(0, 269, 0, 326)
+Page2.Visible = false
+
+Fruit6_2.Name = "Fruit6"
+Fruit6_2.Parent = Page2
+Fruit6_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit6_2.Position = UDim2.new(0.0929367989, 0, 0.036809817, 0)
+Fruit6_2.Size = UDim2.new(0, 80, 0, 80)
+Fruit6_2.Image = "http://www.roblox.com/asset/?id=6390937536"
+
+Fruit1Label_2.Name = "Fruit1Label"
+Fruit1Label_2.Parent = Fruit6_2
+Fruit1Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label_2.BackgroundTransparency = 0.850
+Fruit1Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label_2.Font = Enum.Font.SourceSans
+Fruit1Label_2.Text = "Kiwi"
+Fruit1Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label_2.TextScaled = true
+Fruit1Label_2.TextSize = 14.000
+Fruit1Label_2.TextWrapped = true
+
+FruitPriceLabel1_2.Name = "FruitPriceLabel1"
+FruitPriceLabel1_2.Parent = Fruit6_2
+FruitPriceLabel1_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1_2.BackgroundTransparency = 0.500
+FruitPriceLabel1_2.BorderSizePixel = 0
+FruitPriceLabel1_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1_2.Font = Enum.Font.SourceSans
+FruitPriceLabel1_2.Text = "$5"
+FruitPriceLabel1_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1_2.TextScaled = true
+FruitPriceLabel1_2.TextSize = 14.000
+FruitPriceLabel1_2.TextWrapped = true
+
+Fruit7.Name = "Fruit7"
+Fruit7.Parent = Page2
+Fruit7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit7.Position = UDim2.new(0.609665453, 0, 0.036809817, 0)
+Fruit7.Size = UDim2.new(0, 80, 0, 80)
+Fruit7.Image = "http://www.roblox.com/asset/?id=6390937863"
+
+Fruit2Label_2.Name = "Fruit2Label"
+Fruit2Label_2.Parent = Fruit7
+Fruit2Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit2Label_2.BackgroundTransparency = 0.850
+Fruit2Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit2Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit2Label_2.Font = Enum.Font.SourceSans
+Fruit2Label_2.Text = "Large Banana"
+Fruit2Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit2Label_2.TextScaled = true
+Fruit2Label_2.TextSize = 14.000
+Fruit2Label_2.TextWrapped = true
+
+FruitPriceLabel2_2.Name = "FruitPriceLabel2"
+FruitPriceLabel2_2.Parent = Fruit7
+FruitPriceLabel2_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel2_2.BackgroundTransparency = 0.500
+FruitPriceLabel2_2.BorderSizePixel = 0
+FruitPriceLabel2_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel2_2.Font = Enum.Font.SourceSans
+FruitPriceLabel2_2.Text = "$20"
+FruitPriceLabel2_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel2_2.TextScaled = true
+FruitPriceLabel2_2.TextSize = 14.000
+FruitPriceLabel2_2.TextWrapped = true
+
+Fruit9.Name = "Fruit9"
+Fruit9.Parent = Page2
+Fruit9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit9.Position = UDim2.new(0.609665453, 0, 0.37730062, 0)
+Fruit9.Size = UDim2.new(0, 80, 0, 80)
+Fruit9.Image = "http://www.roblox.com/asset/?id=6390937673"
+
+Fruit4Label_2.Name = "Fruit4Label"
+Fruit4Label_2.Parent = Fruit9
+Fruit4Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit4Label_2.BackgroundTransparency = 0.850
+Fruit4Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit4Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit4Label_2.Font = Enum.Font.SourceSans
+Fruit4Label_2.Text = "Kumquat"
+Fruit4Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit4Label_2.TextScaled = true
+Fruit4Label_2.TextSize = 14.000
+Fruit4Label_2.TextWrapped = true
+
+FruitPriceLabel4_2.Name = "FruitPriceLabel4"
+FruitPriceLabel4_2.Parent = Fruit9
+FruitPriceLabel4_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel4_2.BackgroundTransparency = 0.500
+FruitPriceLabel4_2.BorderSizePixel = 0
+FruitPriceLabel4_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel4_2.Font = Enum.Font.SourceSans
+FruitPriceLabel4_2.Text = "$20"
+FruitPriceLabel4_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel4_2.TextScaled = true
+FruitPriceLabel4_2.TextSize = 14.000
+FruitPriceLabel4_2.TextWrapped = true
+
+Fruit8.Name = "Fruit8"
+Fruit8.Parent = Page2
+Fruit8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit8.Position = UDim2.new(0.0929367989, 0, 0.37730062, 0)
+Fruit8.Size = UDim2.new(0, 80, 0, 80)
+Fruit8.Image = "http://www.roblox.com/asset/?id=6390937340"
+
+Fruit3Label_2.Name = "Fruit3Label"
+Fruit3Label_2.Parent = Fruit8
+Fruit3Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit3Label_2.BackgroundTransparency = 0.850
+Fruit3Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit3Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit3Label_2.Font = Enum.Font.SourceSans
+Fruit3Label_2.Text = "Horned Melon"
+Fruit3Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit3Label_2.TextScaled = true
+Fruit3Label_2.TextSize = 14.000
+Fruit3Label_2.TextWrapped = true
+
+FruitPriceLabel3_2.Name = "FruitPriceLabel3"
+FruitPriceLabel3_2.Parent = Fruit8
+FruitPriceLabel3_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel3_2.BackgroundTransparency = 0.500
+FruitPriceLabel3_2.BorderSizePixel = 0
+FruitPriceLabel3_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel3_2.Font = Enum.Font.SourceSans
+FruitPriceLabel3_2.Text = "$120"
+FruitPriceLabel3_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel3_2.TextScaled = true
+FruitPriceLabel3_2.TextSize = 14.000
+FruitPriceLabel3_2.TextWrapped = true
+
+Fruit11.Name = "Fruit11"
+Fruit11.Parent = Page2
+Fruit11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit11.Position = UDim2.new(0.609665453, 0, 0.696319044, 0)
+Fruit11.Size = UDim2.new(0, 80, 0, 80)
+Fruit11.Image = "http://www.roblox.com/asset/?id=6390938219"
+
+Fruit6Label_2.Name = "Fruit6Label"
+Fruit6Label_2.Parent = Fruit11
+Fruit6Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit6Label_2.BackgroundTransparency = 0.850
+Fruit6Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit6Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit6Label_2.Font = Enum.Font.SourceSans
+Fruit6Label_2.Text = "Mango"
+Fruit6Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit6Label_2.TextScaled = true
+Fruit6Label_2.TextSize = 14.000
+Fruit6Label_2.TextWrapped = true
+
+FruitPriceLabel6_2.Name = "FruitPriceLabel6"
+FruitPriceLabel6_2.Parent = Fruit11
+FruitPriceLabel6_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel6_2.BackgroundTransparency = 0.500
+FruitPriceLabel6_2.BorderSizePixel = 0
+FruitPriceLabel6_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel6_2.Font = Enum.Font.SourceSans
+FruitPriceLabel6_2.Text = "$17"
+FruitPriceLabel6_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel6_2.TextScaled = true
+FruitPriceLabel6_2.TextSize = 14.000
+FruitPriceLabel6_2.TextWrapped = true
+
+Fruit10.Name = "Fruit10"
+Fruit10.Parent = Page2
+Fruit10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit10.Position = UDim2.new(0.0929367989, 0, 0.696319044, 0)
+Fruit10.Size = UDim2.new(0, 80, 0, 80)
+Fruit10.Image = "http://www.roblox.com/asset/?id=6390938016"
+
+Fruit5Label_2.Name = "Fruit5Label"
+Fruit5Label_2.Parent = Fruit10
+Fruit5Label_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit5Label_2.BackgroundTransparency = 0.850
+Fruit5Label_2.Position = UDim2.new(0, 0, 1, 0)
+Fruit5Label_2.Size = UDim2.new(0, 80, 0, 14)
+Fruit5Label_2.Font = Enum.Font.SourceSans
+Fruit5Label_2.Text = "Lemon"
+Fruit5Label_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit5Label_2.TextScaled = true
+Fruit5Label_2.TextSize = 14.000
+Fruit5Label_2.TextWrapped = true
+
+FruitPriceLabel5_2.Name = "FruitPriceLabel5"
+FruitPriceLabel5_2.Parent = Fruit10
+FruitPriceLabel5_2.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel5_2.BackgroundTransparency = 0.500
+FruitPriceLabel5_2.BorderSizePixel = 0
+FruitPriceLabel5_2.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel5_2.Font = Enum.Font.SourceSans
+FruitPriceLabel5_2.Text = "$12"
+FruitPriceLabel5_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel5_2.TextScaled = true
+FruitPriceLabel5_2.TextSize = 14.000
+FruitPriceLabel5_2.TextWrapped = true
+
+PageNumber_2.Name = "PageNumber"
+PageNumber_2.Parent = Page2
+PageNumber_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageNumber_2.BackgroundTransparency = 1.000
+PageNumber_2.Position = UDim2.new(0.405204475, 0, 0.94785279, 0)
+PageNumber_2.Size = UDim2.new(0, 55, 0, 12)
+PageNumber_2.Font = Enum.Font.SourceSans
+PageNumber_2.Text = "Page 2"
+PageNumber_2.TextColor3 = Color3.fromRGB(30, 30, 30)
+PageNumber_2.TextSize = 14.000
+
+Page3.Name = "Page3"
+Page3.Parent = MainFrame
+Page3.BackgroundColor3 = Color3.fromRGB(224, 172, 90)
+Page3.Position = UDim2.new(0.0501672253, 0, 0.249501005, 0)
+Page3.Size = UDim2.new(0, 269, 0, 326)
+Page3.Visible = false
+
+Fruit12.Name = "Fruit12"
+Fruit12.Parent = Page3
+Fruit12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit12.Position = UDim2.new(0.0929367989, 0, 0.036809817, 0)
+Fruit12.Size = UDim2.new(0, 80, 0, 80)
+Fruit12.Image = "http://www.roblox.com/asset/?id=6390938390"
+
+Fruit1Label_3.Name = "Fruit1Label"
+Fruit1Label_3.Parent = Fruit12
+Fruit1Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label_3.BackgroundTransparency = 0.850
+Fruit1Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label_3.Font = Enum.Font.SourceSans
+Fruit1Label_3.Text = "Orange"
+Fruit1Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label_3.TextScaled = true
+Fruit1Label_3.TextSize = 14.000
+Fruit1Label_3.TextWrapped = true
+
+FruitPriceLabel1_3.Name = "FruitPriceLabel1"
+FruitPriceLabel1_3.Parent = Fruit12
+FruitPriceLabel1_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1_3.BackgroundTransparency = 0.500
+FruitPriceLabel1_3.BorderSizePixel = 0
+FruitPriceLabel1_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1_3.Font = Enum.Font.SourceSans
+FruitPriceLabel1_3.Text = "$6"
+FruitPriceLabel1_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1_3.TextScaled = true
+FruitPriceLabel1_3.TextSize = 14.000
+FruitPriceLabel1_3.TextWrapped = true
+
+Fruit13.Name = "Fruit13"
+Fruit13.Parent = Page3
+Fruit13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit13.Position = UDim2.new(0.609665453, 0, 0.036809817, 0)
+Fruit13.Size = UDim2.new(0, 80, 0, 80)
+Fruit13.Image = "http://www.roblox.com/asset/?id=6390938685"
+
+Fruit2Label_3.Name = "Fruit2Label"
+Fruit2Label_3.Parent = Fruit13
+Fruit2Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit2Label_3.BackgroundTransparency = 0.850
+Fruit2Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit2Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit2Label_3.Font = Enum.Font.SourceSans
+Fruit2Label_3.Text = "Papaya"
+Fruit2Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit2Label_3.TextScaled = true
+Fruit2Label_3.TextSize = 14.000
+Fruit2Label_3.TextWrapped = true
+
+FruitPriceLabel2_3.Name = "FruitPriceLabel2"
+FruitPriceLabel2_3.Parent = Fruit13
+FruitPriceLabel2_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel2_3.BackgroundTransparency = 0.500
+FruitPriceLabel2_3.BorderSizePixel = 0
+FruitPriceLabel2_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel2_3.Font = Enum.Font.SourceSans
+FruitPriceLabel2_3.Text = "$100"
+FruitPriceLabel2_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel2_3.TextScaled = true
+FruitPriceLabel2_3.TextSize = 14.000
+FruitPriceLabel2_3.TextWrapped = true
+
+Fruit15.Name = "Fruit15"
+Fruit15.Parent = Page3
+Fruit15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit15.Position = UDim2.new(0.609665453, 0, 0.37730062, 0)
+Fruit15.Size = UDim2.new(0, 80, 0, 80)
+Fruit15.Image = "http://www.roblox.com/asset/?id=6390942909"
+
+Fruit4Label_3.Name = "Fruit4Label"
+Fruit4Label_3.Parent = Fruit15
+Fruit4Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit4Label_3.BackgroundTransparency = 0.850
+Fruit4Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit4Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit4Label_3.Font = Enum.Font.SourceSans
+Fruit4Label_3.Text = "Pear"
+Fruit4Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit4Label_3.TextScaled = true
+Fruit4Label_3.TextSize = 14.000
+Fruit4Label_3.TextWrapped = true
+
+FruitPriceLabel4_3.Name = "FruitPriceLabel4"
+FruitPriceLabel4_3.Parent = Fruit15
+FruitPriceLabel4_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel4_3.BackgroundTransparency = 0.500
+FruitPriceLabel4_3.BorderSizePixel = 0
+FruitPriceLabel4_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel4_3.Font = Enum.Font.SourceSans
+FruitPriceLabel4_3.Text = "$7"
+FruitPriceLabel4_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel4_3.TextScaled = true
+FruitPriceLabel4_3.TextSize = 14.000
+FruitPriceLabel4_3.TextWrapped = true
+
+Fruit14.Name = "Fruit14"
+Fruit14.Parent = Page3
+Fruit14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit14.Position = UDim2.new(0.0929367989, 0, 0.37730062, 0)
+Fruit14.Size = UDim2.new(0, 80, 0, 80)
+Fruit14.Image = "http://www.roblox.com/asset/?id=6390942712"
+
+Fruit3Label_3.Name = "Fruit3Label"
+Fruit3Label_3.Parent = Fruit14
+Fruit3Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit3Label_3.BackgroundTransparency = 0.850
+Fruit3Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit3Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit3Label_3.Font = Enum.Font.SourceSans
+Fruit3Label_3.Text = "Peach"
+Fruit3Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit3Label_3.TextScaled = true
+Fruit3Label_3.TextSize = 14.000
+Fruit3Label_3.TextWrapped = true
+
+FruitPriceLabel3_3.Name = "FruitPriceLabel3"
+FruitPriceLabel3_3.Parent = Fruit14
+FruitPriceLabel3_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel3_3.BackgroundTransparency = 0.500
+FruitPriceLabel3_3.BorderSizePixel = 0
+FruitPriceLabel3_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel3_3.Font = Enum.Font.SourceSans
+FruitPriceLabel3_3.Text = "$7"
+FruitPriceLabel3_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel3_3.TextScaled = true
+FruitPriceLabel3_3.TextSize = 14.000
+FruitPriceLabel3_3.TextWrapped = true
+
+Fruit17.Name = "Fruit17"
+Fruit17.Parent = Page3
+Fruit17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit17.Position = UDim2.new(0.609665453, 0, 0.696319044, 0)
+Fruit17.Size = UDim2.new(0, 80, 0, 80)
+Fruit17.Image = "http://www.roblox.com/asset/?id=6390943202"
+
+Fruit6Label_3.Name = "Fruit6Label"
+Fruit6Label_3.Parent = Fruit17
+Fruit6Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit6Label_3.BackgroundTransparency = 0.850
+Fruit6Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit6Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit6Label_3.Font = Enum.Font.SourceSans
+Fruit6Label_3.Text = "Plum"
+Fruit6Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit6Label_3.TextScaled = true
+Fruit6Label_3.TextSize = 14.000
+Fruit6Label_3.TextWrapped = true
+
+FruitPriceLabel6_3.Name = "FruitPriceLabel6"
+FruitPriceLabel6_3.Parent = Fruit17
+FruitPriceLabel6_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel6_3.BackgroundTransparency = 0.500
+FruitPriceLabel6_3.BorderSizePixel = 0
+FruitPriceLabel6_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel6_3.Font = Enum.Font.SourceSans
+FruitPriceLabel6_3.Text = "$9"
+FruitPriceLabel6_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel6_3.TextScaled = true
+FruitPriceLabel6_3.TextSize = 14.000
+FruitPriceLabel6_3.TextWrapped = true
+
+Fruit15_2.Name = "Fruit15"
+Fruit15_2.Parent = Page3
+Fruit15_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit15_2.Position = UDim2.new(0.0929367989, 0, 0.696319044, 0)
+Fruit15_2.Size = UDim2.new(0, 80, 0, 80)
+Fruit15_2.Image = "http://www.roblox.com/asset/?id=6390943059"
+
+Fruit5Label_3.Name = "Fruit5Label"
+Fruit5Label_3.Parent = Fruit15_2
+Fruit5Label_3.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit5Label_3.BackgroundTransparency = 0.850
+Fruit5Label_3.Position = UDim2.new(0, 0, 1, 0)
+Fruit5Label_3.Size = UDim2.new(0, 80, 0, 14)
+Fruit5Label_3.Font = Enum.Font.SourceSans
+Fruit5Label_3.Text = "Pineapple"
+Fruit5Label_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit5Label_3.TextScaled = true
+Fruit5Label_3.TextSize = 14.000
+Fruit5Label_3.TextWrapped = true
+
+FruitPriceLabel5_3.Name = "FruitPriceLabel5"
+FruitPriceLabel5_3.Parent = Fruit15_2
+FruitPriceLabel5_3.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel5_3.BackgroundTransparency = 0.500
+FruitPriceLabel5_3.BorderSizePixel = 0
+FruitPriceLabel5_3.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel5_3.Font = Enum.Font.SourceSans
+FruitPriceLabel5_3.Text = "$425"
+FruitPriceLabel5_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel5_3.TextScaled = true
+FruitPriceLabel5_3.TextSize = 14.000
+FruitPriceLabel5_3.TextWrapped = true
+
+PageNumber_3.Name = "PageNumber"
+PageNumber_3.Parent = Page3
+PageNumber_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageNumber_3.BackgroundTransparency = 1.000
+PageNumber_3.Position = UDim2.new(0.405204475, 0, 0.94785279, 0)
+PageNumber_3.Size = UDim2.new(0, 55, 0, 12)
+PageNumber_3.Font = Enum.Font.SourceSans
+PageNumber_3.Text = "Page 3"
+PageNumber_3.TextColor3 = Color3.fromRGB(30, 30, 30)
+PageNumber_3.TextSize = 14.000
+
+Page4.Name = "Page4"
+Page4.Parent = MainFrame
+Page4.BackgroundColor3 = Color3.fromRGB(224, 172, 90)
+Page4.Position = UDim2.new(0.0501672253, 0, 0.249501005, 0)
+Page4.Size = UDim2.new(0, 269, 0, 326)
+Page4.Visible = false
+
+Fruit18.Name = "Fruit18"
+Fruit18.Parent = Page4
+Fruit18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit18.Position = UDim2.new(0.0929367989, 0, 0.036809817, 0)
+Fruit18.Size = UDim2.new(0, 80, 0, 80)
+Fruit18.Image = "http://www.roblox.com/asset/?id=6390943829"
+
+Fruit1Label_4.Name = "Fruit1Label"
+Fruit1Label_4.Parent = Fruit18
+Fruit1Label_4.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label_4.BackgroundTransparency = 0.850
+Fruit1Label_4.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label_4.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label_4.Font = Enum.Font.SourceSans
+Fruit1Label_4.Text = "Watermellon"
+Fruit1Label_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label_4.TextScaled = true
+Fruit1Label_4.TextSize = 14.000
+Fruit1Label_4.TextWrapped = true
+
+FruitPriceLabel1_4.Name = "FruitPriceLabel1"
+FruitPriceLabel1_4.Parent = Fruit18
+FruitPriceLabel1_4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1_4.BackgroundTransparency = 0.500
+FruitPriceLabel1_4.BorderSizePixel = 0
+FruitPriceLabel1_4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1_4.Font = Enum.Font.SourceSans
+FruitPriceLabel1_4.Text = "$40"
+FruitPriceLabel1_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1_4.TextScaled = true
+FruitPriceLabel1_4.TextSize = 14.000
+FruitPriceLabel1_4.TextWrapped = true
+
+Fruit19.Name = "Fruit19"
+Fruit19.Parent = Page4
+Fruit19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit19.Position = UDim2.new(0.609665453, 0, 0.37730062, 0)
+Fruit19.Size = UDim2.new(0, 80, 0, 80)
+Fruit19.Image = "http://www.roblox.com/asset/?id=6390943350"
+
+Fruit2Label_4.Name = "Fruit2Label"
+Fruit2Label_4.Parent = Fruit19
+Fruit2Label_4.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit2Label_4.BackgroundTransparency = 0.850
+Fruit2Label_4.Position = UDim2.new(0, 0, 1, 0)
+Fruit2Label_4.Size = UDim2.new(0, 80, 0, 14)
+Fruit2Label_4.Font = Enum.Font.SourceSans
+Fruit2Label_4.Text = "Potato"
+Fruit2Label_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit2Label_4.TextScaled = true
+Fruit2Label_4.TextSize = 14.000
+Fruit2Label_4.TextWrapped = true
+
+FruitPriceLabel2_4.Name = "FruitPriceLabel2"
+FruitPriceLabel2_4.Parent = Fruit19
+FruitPriceLabel2_4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel2_4.BackgroundTransparency = 0.500
+FruitPriceLabel2_4.BorderSizePixel = 0
+FruitPriceLabel2_4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel2_4.Font = Enum.Font.SourceSans
+FruitPriceLabel2_4.Text = "$0"
+FruitPriceLabel2_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel2_4.TextScaled = true
+FruitPriceLabel2_4.TextSize = 14.000
+FruitPriceLabel2_4.TextWrapped = true
+
+TextLabel.Parent = Fruit19
+TextLabel.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+TextLabel.Position = UDim2.new(-0.587499976, 0, 1.3125, 0)
+TextLabel.Size = UDim2.new(0, 149, 0, 81)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "The potato is here for funnys and for the badge. For the badge, press it untill you have about 500. Then, combine and sell them. You should get the badge or be very close. It is kind of useless otherwise. If you have like 497/500 on the top of your screen when you sell them screen, just get enough to make it to 500 potatos."
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Fruit20.Name = "Fruit20"
+Fruit20.Parent = Page4
+Fruit20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit20.Position = UDim2.new(0.0929367989, 0, 0.37730062, 0)
+Fruit20.Size = UDim2.new(0, 80, 0, 80)
+Fruit20.Image = "http://www.roblox.com/asset/?id=6390936622"
+
+Fruit3Label_4.Name = "Fruit3Label"
+Fruit3Label_4.Parent = Fruit20
+Fruit3Label_4.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit3Label_4.BackgroundTransparency = 0.850
+Fruit3Label_4.Position = UDim2.new(0, 0, 1, 0)
+Fruit3Label_4.Size = UDim2.new(0, 80, 0, 14)
+Fruit3Label_4.Font = Enum.Font.SourceSans
+Fruit3Label_4.Text = "Candy Cane"
+Fruit3Label_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit3Label_4.TextScaled = true
+Fruit3Label_4.TextSize = 14.000
+Fruit3Label_4.TextWrapped = true
+
+FruitPriceLabel3_4.Name = "FruitPriceLabel3"
+FruitPriceLabel3_4.Parent = Fruit20
+FruitPriceLabel3_4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel3_4.BackgroundTransparency = 0.500
+FruitPriceLabel3_4.BorderSizePixel = 0
+FruitPriceLabel3_4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel3_4.Font = Enum.Font.SourceSans
+FruitPriceLabel3_4.Text = "$10"
+FruitPriceLabel3_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel3_4.TextScaled = true
+FruitPriceLabel3_4.TextSize = 14.000
+FruitPriceLabel3_4.TextWrapped = true
+
+TextLabel_2.Parent = Fruit20
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+TextLabel_2.Position = UDim2.new(0, 0, 1.3125, 0)
+TextLabel_2.Size = UDim2.new(0, 80, 0, 74)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "The candy cane is kind of glitchey. You can sell them if you put them in the sell box, but you cannot combine them. If you combine them, it will break your game."
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+PageNumber_4.Name = "PageNumber"
+PageNumber_4.Parent = Page4
+PageNumber_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageNumber_4.BackgroundTransparency = 1.000
+PageNumber_4.Position = UDim2.new(0.405204475, 0, 0.94785279, 0)
+PageNumber_4.Size = UDim2.new(0, 55, 0, 12)
+PageNumber_4.Font = Enum.Font.SourceSans
+PageNumber_4.Text = "Page 4"
+PageNumber_4.TextColor3 = Color3.fromRGB(30, 30, 30)
+PageNumber_4.TextSize = 14.000
+
+Fruit21.Name = "Fruit21"
+Fruit21.Parent = Page4
+Fruit21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fruit21.Position = UDim2.new(0.609665453, 0, 0.036809817, 0)
+Fruit21.Size = UDim2.new(0, 80, 0, 80)
+Fruit21.Image = "http://www.roblox.com/asset/?id=6391716179"
+
+Fruit1Label_5.Name = "Fruit1Label"
+Fruit1Label_5.Parent = Fruit21
+Fruit1Label_5.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label_5.BackgroundTransparency = 0.850
+Fruit1Label_5.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label_5.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label_5.Font = Enum.Font.SourceSans
+Fruit1Label_5.Text = "Pomelo"
+Fruit1Label_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label_5.TextScaled = true
+Fruit1Label_5.TextSize = 14.000
+Fruit1Label_5.TextWrapped = true
+
+FruitPriceLabel1_5.Name = "FruitPriceLabel1"
+FruitPriceLabel1_5.Parent = Fruit21
+FruitPriceLabel1_5.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1_5.BackgroundTransparency = 0.500
+FruitPriceLabel1_5.BorderSizePixel = 0
+FruitPriceLabel1_5.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1_5.Font = Enum.Font.SourceSans
+FruitPriceLabel1_5.Text = "$30"
+FruitPriceLabel1_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1_5.TextScaled = true
+FruitPriceLabel1_5.TextSize = 14.000
+FruitPriceLabel1_5.TextWrapped = true
+
+Page5.Name = "Page5"
+Page5.Parent = MainFrame
+Page5.BackgroundColor3 = Color3.fromRGB(224, 172, 90)
+Page5.Position = UDim2.new(0.0501672253, 0, 0.249501005, 0)
+Page5.Size = UDim2.new(0, 269, 0, 326)
+Page5.Visible = false
+
+Crystal1.Name = "Crystal1"
+Crystal1.Parent = Page5
+Crystal1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crystal1.Position = UDim2.new(0.0929367989, 0, 0.036809817, 0)
+Crystal1.Size = UDim2.new(0, 80, 0, 80)
+Crystal1.Image = "http://www.roblox.com/asset/?id=6390936365"
+
+Fruit1Label_6.Name = "Fruit1Label"
+Fruit1Label_6.Parent = Crystal1
+Fruit1Label_6.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit1Label_6.BackgroundTransparency = 0.850
+Fruit1Label_6.Position = UDim2.new(0, 0, 1, 0)
+Fruit1Label_6.Size = UDim2.new(0, 80, 0, 14)
+Fruit1Label_6.Font = Enum.Font.SourceSans
+Fruit1Label_6.Text = "Blue Crystal"
+Fruit1Label_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit1Label_6.TextScaled = true
+Fruit1Label_6.TextSize = 14.000
+Fruit1Label_6.TextWrapped = true
+
+FruitPriceLabel1_6.Name = "FruitPriceLabel1"
+FruitPriceLabel1_6.Parent = Crystal1
+FruitPriceLabel1_6.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel1_6.BackgroundTransparency = 0.500
+FruitPriceLabel1_6.BorderSizePixel = 0
+FruitPriceLabel1_6.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel1_6.Font = Enum.Font.SourceSans
+FruitPriceLabel1_6.Text = "$27"
+FruitPriceLabel1_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel1_6.TextScaled = true
+FruitPriceLabel1_6.TextSize = 14.000
+FruitPriceLabel1_6.TextWrapped = true
+
+Crystal2.Name = "Crystal2"
+Crystal2.Parent = Page5
+Crystal2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crystal2.Position = UDim2.new(0.609665453, 0, 0.036809817, 0)
+Crystal2.Size = UDim2.new(0, 80, 0, 80)
+Crystal2.Image = "http://www.roblox.com/asset/?id=6390937167"
+
+Fruit2Label_5.Name = "Fruit2Label"
+Fruit2Label_5.Parent = Crystal2
+Fruit2Label_5.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit2Label_5.BackgroundTransparency = 0.850
+Fruit2Label_5.Position = UDim2.new(0, 0, 1, 0)
+Fruit2Label_5.Size = UDim2.new(0, 80, 0, 14)
+Fruit2Label_5.Font = Enum.Font.SourceSans
+Fruit2Label_5.Text = "Green Crystal"
+Fruit2Label_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit2Label_5.TextScaled = true
+Fruit2Label_5.TextSize = 14.000
+Fruit2Label_5.TextWrapped = true
+
+FruitPriceLabel2_5.Name = "FruitPriceLabel2"
+FruitPriceLabel2_5.Parent = Crystal2
+FruitPriceLabel2_5.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel2_5.BackgroundTransparency = 0.500
+FruitPriceLabel2_5.BorderSizePixel = 0
+FruitPriceLabel2_5.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel2_5.Font = Enum.Font.SourceSans
+FruitPriceLabel2_5.Text = "$25"
+FruitPriceLabel2_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel2_5.TextScaled = true
+FruitPriceLabel2_5.TextSize = 14.000
+FruitPriceLabel2_5.TextWrapped = true
+
+Crystal4.Name = "Crystal4"
+Crystal4.Parent = Page5
+Crystal4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crystal4.Position = UDim2.new(0.609665453, 0, 0.37730062, 0)
+Crystal4.Size = UDim2.new(0, 80, 0, 80)
+Crystal4.Image = "http://www.roblox.com/asset/?id=6390943495"
+
+Fruit4Label_4.Name = "Fruit4Label"
+Fruit4Label_4.Parent = Crystal4
+Fruit4Label_4.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit4Label_4.BackgroundTransparency = 0.850
+Fruit4Label_4.Position = UDim2.new(0, 0, 1, 0)
+Fruit4Label_4.Size = UDim2.new(0, 80, 0, 14)
+Fruit4Label_4.Font = Enum.Font.SourceSans
+Fruit4Label_4.Text = "Purple Crystal"
+Fruit4Label_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit4Label_4.TextScaled = true
+Fruit4Label_4.TextSize = 14.000
+Fruit4Label_4.TextWrapped = true
+
+FruitPriceLabel4_4.Name = "FruitPriceLabel4"
+FruitPriceLabel4_4.Parent = Crystal4
+FruitPriceLabel4_4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel4_4.BackgroundTransparency = 0.500
+FruitPriceLabel4_4.BorderSizePixel = 0
+FruitPriceLabel4_4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel4_4.Font = Enum.Font.SourceSans
+FruitPriceLabel4_4.Text = "$150"
+FruitPriceLabel4_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel4_4.TextScaled = true
+FruitPriceLabel4_4.TextSize = 14.000
+FruitPriceLabel4_4.TextWrapped = true
+
+Crystal3.Name = "Crystal3"
+Crystal3.Parent = Page5
+Crystal3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crystal3.Position = UDim2.new(0.0929367989, 0, 0.37730062, 0)
+Crystal3.Size = UDim2.new(0, 80, 0, 80)
+Crystal3.Image = "http://www.roblox.com/asset/?id=6390938544"
+
+Fruit3Label_5.Name = "Fruit3Label"
+Fruit3Label_5.Parent = Crystal3
+Fruit3Label_5.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit3Label_5.BackgroundTransparency = 0.850
+Fruit3Label_5.Position = UDim2.new(0, 0, 1, 0)
+Fruit3Label_5.Size = UDim2.new(0, 80, 0, 14)
+Fruit3Label_5.Font = Enum.Font.SourceSans
+Fruit3Label_5.Text = "Orange Crystal"
+Fruit3Label_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit3Label_5.TextScaled = true
+Fruit3Label_5.TextSize = 14.000
+Fruit3Label_5.TextWrapped = true
+
+FruitPriceLabel3_5.Name = "FruitPriceLabel3"
+FruitPriceLabel3_5.Parent = Crystal3
+FruitPriceLabel3_5.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel3_5.BackgroundTransparency = 0.500
+FruitPriceLabel3_5.BorderSizePixel = 0
+FruitPriceLabel3_5.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel3_5.Font = Enum.Font.SourceSans
+FruitPriceLabel3_5.Text = "$50"
+FruitPriceLabel3_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel3_5.TextScaled = true
+FruitPriceLabel3_5.TextSize = 14.000
+FruitPriceLabel3_5.TextWrapped = true
+
+Crystal5.Name = "Crystal5"
+Crystal5.Parent = Page5
+Crystal5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crystal5.Position = UDim2.new(0.0929367989, 0, 0.696319044, 0)
+Crystal5.Size = UDim2.new(0, 80, 0, 80)
+Crystal5.Image = "http://www.roblox.com/asset/?id=6390943703"
+
+Fruit5Label_4.Name = "Fruit5Label"
+Fruit5Label_4.Parent = Crystal5
+Fruit5Label_4.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Fruit5Label_4.BackgroundTransparency = 0.850
+Fruit5Label_4.Position = UDim2.new(0, 0, 1, 0)
+Fruit5Label_4.Size = UDim2.new(0, 80, 0, 14)
+Fruit5Label_4.Font = Enum.Font.SourceSans
+Fruit5Label_4.Text = "Red Crystal"
+Fruit5Label_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fruit5Label_4.TextScaled = true
+Fruit5Label_4.TextSize = 14.000
+Fruit5Label_4.TextWrapped = true
+
+FruitPriceLabel5_4.Name = "FruitPriceLabel5"
+FruitPriceLabel5_4.Parent = Crystal5
+FruitPriceLabel5_4.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+FruitPriceLabel5_4.BackgroundTransparency = 0.500
+FruitPriceLabel5_4.BorderSizePixel = 0
+FruitPriceLabel5_4.Size = UDim2.new(0, 20, 0, 20)
+FruitPriceLabel5_4.Font = Enum.Font.SourceSans
+FruitPriceLabel5_4.Text = "$23"
+FruitPriceLabel5_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+FruitPriceLabel5_4.TextScaled = true
+FruitPriceLabel5_4.TextSize = 14.000
+FruitPriceLabel5_4.TextWrapped = true
+
+PageNumber_5.Name = "PageNumber"
+PageNumber_5.Parent = Page5
+PageNumber_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageNumber_5.BackgroundTransparency = 1.000
+PageNumber_5.Position = UDim2.new(0.405204475, 0, 0.94785279, 0)
+PageNumber_5.Size = UDim2.new(0, 55, 0, 12)
+PageNumber_5.Font = Enum.Font.SourceSans
+PageNumber_5.Text = "Page 5"
+PageNumber_5.TextColor3 = Color3.fromRGB(30, 30, 30)
+PageNumber_5.TextSize = 14.000
+
+Page1Toggle.Name = "Page1Toggle"
+Page1Toggle.Parent = MainFrame
+Page1Toggle.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Page1Toggle.Position = UDim2.new(0.0602006689, 0, 0.170019969, 7)
+Page1Toggle.Size = UDim2.new(0, 53, 0, 29)
+Page1Toggle.Font = Enum.Font.SourceSans
+Page1Toggle.Text = "Fruit 1"
+Page1Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Page1Toggle.TextSize = 14.000
+
+Page2Toggle.Name = "Page2Toggle"
+Page2Toggle.Parent = MainFrame
+Page2Toggle.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Page2Toggle.Position = UDim2.new(0.237458199, 0, 0.170019969, 7)
+Page2Toggle.Size = UDim2.new(0, 53, 0, 29)
+Page2Toggle.Font = Enum.Font.SourceSans
+Page2Toggle.Text = "Fruit 2"
+Page2Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Page2Toggle.TextSize = 14.000
+
+Page3Toggle.Name = "Page3Toggle"
+Page3Toggle.Parent = MainFrame
+Page3Toggle.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Page3Toggle.Position = UDim2.new(0.408026755, 0, 0.170019969, 7)
+Page3Toggle.Size = UDim2.new(0, 53, 0, 29)
+Page3Toggle.Font = Enum.Font.SourceSans
+Page3Toggle.Text = "Fruit 3"
+Page3Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Page3Toggle.TextSize = 14.000
+
+Page4Toggle.Name = "Page4Toggle"
+Page4Toggle.Parent = MainFrame
+Page4Toggle.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Page4Toggle.Position = UDim2.new(0.585284293, 0, 0.170019969, 7)
+Page4Toggle.Size = UDim2.new(0, 53, 0, 29)
+Page4Toggle.Font = Enum.Font.SourceSans
+Page4Toggle.Text = "Fruit 4"
+Page4Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Page4Toggle.TextSize = 14.000
+
+Page5Toggle.Name = "Page5Toggle"
+Page5Toggle.Parent = MainFrame
+Page5Toggle.BackgroundColor3 = Color3.fromRGB(176, 116, 68)
+Page5Toggle.Position = UDim2.new(0.762541831, 0, 0.170019969, 7)
+Page5Toggle.Size = UDim2.new(0, 53, 0, 29)
+Page5Toggle.Font = Enum.Font.SourceSans
+Page5Toggle.Text = "Crystals"
+Page5Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Page5Toggle.TextSize = 14.000
+
+-- Scripts:
+
+local function RZOC_fake_script() -- MainFrame.KeyToggle 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	--Open Script
+	local uis = game:GetService("UserInputService")
+	local ui = script.Parent.Parent.Parent.TreeLandsGUI
+	local toggle = false
+	uis.InputBegan:Connect(function(key)
+		if key.KeyCode == Enum.KeyCode.RightShift then
+				ui.Enabled = not ui.Enabled;
+			end
+		end)
+	
+	
+end
+coroutine.wrap(RZOC_fake_script)()
+local function EEZM_fake_script() -- Exit.ToggleScript 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(EEZM_fake_script)()
+local function PWNG_fake_script() -- Page1Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Page1Toggle)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Page1.Visible = true
+		script.Parent.Parent.Page2.Visible = false
+		script.Parent.Parent.Page3.Visible = false
+		script.Parent.Parent.Page4.Visible = false
+		script.Parent.Parent.Page5.Visible = false
+	end)
+end
+coroutine.wrap(PWNG_fake_script)()
+local function MFRB_fake_script() -- Page2Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Page2Toggle)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Page1.Visible = false
+		script.Parent.Parent.Page2.Visible = true
+		script.Parent.Parent.Page3.Visible = false
+		script.Parent.Parent.Page4.Visible = false
+		script.Parent.Parent.Page5.Visible = false
+	end)
+end
+coroutine.wrap(MFRB_fake_script)()
+local function CYWDXVP_fake_script() -- Page3Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Page3Toggle)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Page1.Visible = false
+		script.Parent.Parent.Page2.Visible = false
+		script.Parent.Parent.Page3.Visible = true
+		script.Parent.Parent.Page4.Visible = false
+		script.Parent.Parent.Page5.Visible = false
+	end)
+end
+coroutine.wrap(CYWDXVP_fake_script)()
+local function NSLDHR_fake_script() -- Page4Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Page4Toggle)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Page1.Visible = false
+		script.Parent.Parent.Page2.Visible = false
+		script.Parent.Parent.Page3.Visible = false
+		script.Parent.Parent.Page4.Visible = true
+		script.Parent.Parent.Page5.Visible = false
+	end)
+end
+coroutine.wrap(NSLDHR_fake_script)()
+local function AICVQR_fake_script() -- Page5Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Page5Toggle)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Page1.Visible = false
+		script.Parent.Parent.Page2.Visible = false
+		script.Parent.Parent.Page3.Visible = false
+		script.Parent.Parent.Page4.Visible = false
+		script.Parent.Parent.Page5.Visible = true
+	end)
+end
+coroutine.wrap(AICVQR_fake_script)()
+
+--Real Scripts For The Buttons
+
+Fruit1.MouseButton1Down:connect(function() 
+	local desiredFruit = "Apple"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit2.MouseButton1Down:connect(function() 
+	local desiredFruit = "Banana"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit3.MouseButton1Down:connect(function() 
+	local desiredFruit = "Blackberry Bundle"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit4.MouseButton1Down:connect(function() 
+	local desiredFruit = "Blueberry Bundle"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit5.MouseButton1Down:connect(function() 
+	local desiredFruit = "Durian"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit6.MouseButton1Down:connect(function() 
+	local desiredFruit = "Green Apple"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit6_2.MouseButton1Down:connect(function() 
+	local desiredFruit = "Kiwi"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit7.MouseButton1Down:connect(function() 
+	local desiredFruit = "Large Banana"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit8.MouseButton1Down:connect(function() 
+	local desiredFruit = "Horned Melon"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit9.MouseButton1Down:connect(function() 
+	local desiredFruit = "Kumquat"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit10.MouseButton1Down:connect(function() 
+	local desiredFruit = "Lemon"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit11.MouseButton1Down:connect(function() 
+	local desiredFruit = "Mango"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit12.MouseButton1Down:connect(function() 
+	local desiredFruit = "Orange"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit13.MouseButton1Down:connect(function() 
+	local desiredFruit = "Papaya"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit14.MouseButton1Down:connect(function() 
+	local desiredFruit = "Peach"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit15_2.MouseButton1Down:connect(function() 
+	local desiredFruit = "Pineapple"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit15.MouseButton1Down:connect(function() 
+	local desiredFruit = "Pear"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit17.MouseButton1Down:connect(function() 
+	local desiredFruit = "Plum"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit18.MouseButton1Down:connect(function() 
+	local desiredFruit = "Watermelon"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit19.MouseButton1Down:connect(function() 
+	local desiredFruit = "potato"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit20.MouseButton1Down:connect(function() 
+	local desiredFruit = "Candy Cane"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Crystal1.MouseButton1Down:connect(function() 
+	local desiredFruit = "Blue Crystal"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Crystal2.MouseButton1Down:connect(function() 
+	local desiredFruit = "Green Crystal"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Crystal3.MouseButton1Down:connect(function() 
+	local desiredFruit = "Orange Crystal"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Crystal4.MouseButton1Down:connect(function() 
+	local desiredFruit = "Purple Crystal"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Crystal5.MouseButton1Down:connect(function() 
+	local desiredFruit = "Red Crystal"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
+Fruit21.MouseButton1Down:connect(function() 
+	local desiredFruit = "Pomelo"
+	for i, v in pairs(game.Workspace.Fruits:GetChildren()) do
+		v.Tooltip.Value = desiredFruit
+		v.Name = desiredFruit
+		v:Clone().Parent = game.Workspace.Fruits
+	end
+end)
