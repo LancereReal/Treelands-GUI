@@ -1,0 +1,356 @@
+local fruits = game:GetService("Workspace").Fruits
+local spot = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+if game.CoreGui:FindFirstChild("GameGui") then
+	game.CoreGui["GameGui"]:Destroy()
+end
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/UI-Librarys/main/Zypher%20(HOT!)"))()
+
+local Main = library:CreateMain({
+    -- Required
+    projName = "GameGui", -- The name for the UI in game.CoreGui, not the GUI itself.
+    -- Optional
+    Resizable = true, -- Requires MinSize and MaxSize
+    MinSize = UDim2.new(0, 400, 0, 400),
+    MaxSize = UDim2.new(0, 750, 0, 500)
+})
+
+-- A category is a tab
+local Category = Main:CreateCategory("Scripts")
+local Category2 = Main:CreateCategory("Waypoints")
+local Category4 = Main:CreateCategory("Fruit")
+local Category3 = Main:CreateCategory("Settings")
+
+-- Self explanatory
+local Section = Category:CreateSection("Usefull Scripts")
+local Section2 = Category2:CreateSection("Waypoints")
+local Section3 = Category3:CreateSection("General Settings")
+local Section4 = Category4:CreateSection("Custom Fruit")
+
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local hrp = chr.HumanoidRootPart
+
+local FrtTp = Section:Create("Button", "TP Fruit",
+	function()
+		for i,v in pairs(fruits:GetChildren()) do
+            if v.CFrame then
+               v.CFrame = spot.CFrame
+            end
+        end
+	end,
+	{
+		animated = true
+	}
+)
+
+local FrtTp2 = Section:Create("Button", "TP Fruit To Sell Point",
+	function()
+		for i,v in pairs(fruits:GetChildren()) do
+            if v.CFrame then
+               v.CFrame = CFrame.new(321, 927, 148)
+            end
+        end
+	end,
+	{
+		animated = true
+	}
+)
+
+local FreeMoney = Section:Create("Button", "Turn All Fruit Into Pinapples",
+	function()
+		local desiredFruit = "Pineapple"
+		for i,v in pairs(fruits:GetChildren()) do
+            v.Tooltip.Value = desiredFruit
+			v.Name = desiredFruit
+			v:Clone().Parent = game.Workspace.Fruits
+        end
+	end,
+	{
+		animated = true
+	}
+)
+
+local FreeMoney2 = Section:Create("Button", "Turn All Fruit Into Potatos",
+	function()
+		local desiredFruit = "Potato"
+		for i,v in pairs(fruits:GetChildren()) do
+            v.Tooltip.Value = desiredFruit
+			v.Name = desiredFruit
+			v:Clone().Parent = game.Workspace.Fruits
+        end
+	end,
+	{
+		animated = true
+	}
+)
+
+local FruitBye = Section:Create("Button", "Delete All Of Your Fruit",
+	function()
+		for i,v in pairs(fruits:GetChildren()) do
+            v:Destroy()
+        end
+	end,
+	{
+		animated = true
+	}
+)
+
+local NightLight = Section:Create("Button", "Brighter Light Around Character",
+	function()
+		hrp.PointLight.Brightness = 10000
+		hrp.PointLight.Range = 60
+	end,
+	{
+		animated = true
+	}
+)
+
+Section:Create("Slider", "Walk Speed", -- The name of the slider
+    function(w)
+        game:GetService("Workspace").FoxysCove102.Humanoid.WalkSpeed = w
+    end,
+    {
+        -- Required
+        min = 16, -- Smallest value on the slider
+        max = 500, -- Largest value on the slider
+
+        -- Optional
+        default = 16,
+        precise = false, -- Whether to do decimal values
+        changeablevalue = false-- Should the slider be changeable
+    }
+)
+
+Section:Create("Slider", "Jump Height", -- The name of the slider
+    function(j)
+        game:GetService("Workspace").FoxysCove102.Humanoid.JumpPower = j
+    end,
+    {
+        -- Required
+        min = 50, -- Smallest value on the slider
+        max = 500, -- Largest value on the slider
+
+        -- Optional
+        default = 50,
+        precise = false, -- Whether to do decimal values
+        changeablevalue = false-- Should the slider be changeable
+    }
+)
+
+Section3:Create("Keybind", "Gui Toggle", -- The name of the keybind
+    function()
+        if game:GetService("CoreGui").GameGui.Enabled == true then
+        	game:GetService("CoreGui").GameGui.Enabled = false
+        elseif game:GetService("CoreGui").GameGui.Enabled == false then
+        	game:GetService("CoreGui").GameGui.Enabled = true
+        end
+        print('Gui Toggled!')
+    end,
+    {
+        -- Optional
+        default = Enum.KeyCode.RightShift
+    }
+)
+
+local GuiGoodBye = Section3:Create("Button", "Close Gui",
+	function()
+		game.CoreGui["GameGui"]:Destroy()
+	end,
+	{
+		animated = true
+	}
+)
+
+
+
+local tpMain = Section2:Create("Button", "Main Shack",
+	function()
+		hrp.CFrame = CFrame.new(320, 927, 179)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpApple = Section2:Create("Button", "Apple Trees",
+	function()
+		hrp.CFrame = CFrame.new(219, 927, 108)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpBlueBry = Section2:Create("Button", "Blue Berry Bushes",
+	function()
+		hrp.CFrame = CFrame.new(1028, 971, 402)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpBanana = Section2:Create("Button", "Banana Trees",
+	function()
+		hrp.CFrame = CFrame.new(2019, 1035, 273)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpBigBanana = Section2:Create("Button", "Big Banana Trees",
+	function()
+		hrp.CFrame = CFrame.new(2028, 1085, 250)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpBlackBry = Section2:Create("Button", "Black Berry Bushes",
+	function()
+		hrp.CFrame = CFrame.new(360, 992, 1292)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpOrange = Section2:Create("Button", "Orange Trees",
+	function()
+		hrp.CFrame = CFrame.new(47, 1030, 1500)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpPotato = Section2:Create("Button", "PoTAtO",
+	function()
+		hrp.CFrame = CFrame.new(-52, 1030, 1467)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpPeach = Section2:Create("Button", "Peach Trees ;)",
+	function()
+		hrp.CFrame = CFrame.new(-968, 944, 160)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpOrgCry = Section2:Create("Button", "Orange Crystal Cave",
+	function()
+		hrp.CFrame = CFrame.new(1198, 1043, -1249)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpCry = Section2:Create("Button", "Crystal Cave",
+	function()
+		hrp.CFrame = CFrame.new(1163, 972, -874)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpMemorial = Section2:Create("Button", "Memorial Tree",
+	function()
+		hrp.CFrame = CFrame.new(1025, 1454, -865)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpPlum = Section2:Create("Button", "Plum Trees",
+	function()
+		hrp.CFrame = CFrame.new(1000, 1413, -755)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpDurian = Section2:Create("Button", "Durian tree",
+	function()
+		hrp.CFrame = CFrame.new(1802, 1089, 1015)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpWtrmelo = Section2:Create("Button", "Watermelon Bushes",
+	function()
+		hrp.CFrame = CFrame.new(1398, 983, 1132)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpKiwi = Section2:Create("Button", "Kiwi Trees",
+	function()
+		hrp.CFrame = CFrame.new(580, 946, 44)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpMango = Section2:Create("Button", "Mango Tree",
+	function()
+		hrp.CFrame = CFrame.new(1466, 1000, -209)
+	end,
+	{
+		animated = true
+	}
+)
+
+local tpTree = Section2:Create("Button", "Tree House",
+	function()
+		for i, v in pairs(game:GetService("Workspace").MainTrees:GetChildren()) do
+			if v.Name == plr.Name then
+				hrp.CFrame = v.SafeLocation.CFrame + Vector3.new(0, 2, 0)
+			end
+		end
+	end,
+	{
+		animated = true
+	}
+)
+
+--local Drop = Section:Create(
+--    "Dropdown",
+--    "Dropdown", -- The name of the dropdown
+--    function(v)
+--        -- Callback
+--        print(v) -- Option selected
+--    end,
+--    {
+--        -- Required
+--        options = {
+--            "Apples",
+--            "Bananas",
+--            "Pears"
+--        },
+--
+--        -- Optional
+--        default = "Apples"
+--        search = true -- Allows for searching through the dropdown, useful for large arrays of values
+--    }
+--)
+
+local Text = Section3:Create("Textlabel", "Made by LancereScripts / Ham." -- The text for the label
+)
